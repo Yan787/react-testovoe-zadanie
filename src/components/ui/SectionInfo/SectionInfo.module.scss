@@ -1,0 +1,57 @@
+.selectContainer {
+    width: 81%;
+    margin-top: 32px;
+
+    .wrapper {
+        display: flex;
+        margin-bottom: 16px;
+        justify-content: space-between;
+
+        .title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #212029;
+        }
+
+        .action {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            gap: 10px;
+
+            .button {
+                font-size: 12px;
+                font-weight: 400;
+                color: #3772FF; 
+            }
+
+            .arrowDown {
+                transition: transform .2s;
+                transform: rotate(180deg);
+
+                &.activeArrowDown {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
+  
+    .activeChildren {
+        animation: fade .4s ease-in-out;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

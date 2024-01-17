@@ -1,0 +1,34 @@
+$bar-left-width: 270px;
+$bar-right-width: 400px;
+
+.layout {
+    position: relative;
+
+    >div:first-child, 
+    >div:last-child {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        overflow-y: scroll;
+    }
+    
+    >div:first-child {
+        width: $bar-left-width;
+        left: 0;
+    }
+
+    >div:last-child {
+        width: $bar-right-width;
+        right: 0;
+    }
+
+    .center {
+        position: relative;
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
+        padding: 30px 44px;
+        min-height: 100vh;
+        margin: 0 $bar-right-width 0 $bar-left-width;
+        background-color: #FBFCFE;
+    }
+}

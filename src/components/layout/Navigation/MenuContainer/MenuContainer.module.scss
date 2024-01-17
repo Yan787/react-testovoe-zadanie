@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    animation: fade .5s ease-in-out;
+
+     .menu {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+        padding: 12px;
+        box-sizing: border-box;
+        background-color: #FBFCFE1A;
+        transition: all .3s;
+
+        img {
+            width: 24px;
+            height: 24px;
+            margin-right: 0px;
+        }
+
+        .title {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 24px;
+        }
+    }
+
+    >div:last-child {
+        margin-top: 30px;
+
+    }
+
+    .active {
+        transition: all .4s;
+
+        &.menu {
+            width: 206px;
+
+            img {
+                margin-right: 10px;
+            }
+
+            .title {
+                animation: fade 1s ease-in-out
+            }
+        }
+    }
+}
+
+@keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}

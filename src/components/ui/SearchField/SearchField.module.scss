@@ -1,0 +1,25 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+
+    .search {
+        width: 81%;
+        height: 48px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        padding: 12px 40px 12px 16px;
+        outline: none;
+        border: 1px solid #E5E7EF;
+        background-color: #fff;
+        font-size: 16px;
+
+        &::placeholder {
+            color: #ACB2C5;
+        }
+    }
+
+    svg {
+        position: relative;
+        right: 37px;
+    }
+}
