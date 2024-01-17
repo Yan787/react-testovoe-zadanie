@@ -68,13 +68,8 @@ const dropdownData: IDropDown[] = [
 ];
 
 const Nursery = () => {
-  const [currentNursery, setCurrentNursery] = useState("Golden Stepway");
-
-  const { searchTerm, handleSearch } = useNursery();
-
-  const changeCurrencyValue = (value: string) => {
-    setCurrentNursery(value);
-  };
+  const { searchTerm, handleSearch, changeCurrencyValue, currentNursery } =
+    useNursery();
 
   return (
     <div>
